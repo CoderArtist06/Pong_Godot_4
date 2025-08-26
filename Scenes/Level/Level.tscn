@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7dfoucdxobqx"]
+
+[ext_resource type="Script" uid="uid://bgk0k8cc677ux" path="res://Scenes/Level/Level.gd" id="1_4dwx7"]
+[ext_resource type="PackedScene" uid="uid://b6lmoehv7cob7" path="res://Scenes/Edges/Edges.tscn" id="1_vbawi"]
+[ext_resource type="PackedScene" uid="uid://b1e4evkj523c7" path="res://Scenes/Paddle/Player/Player.tscn" id="2_3hkb6"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_4dwx7")
+
+[node name="Edges" parent="." instance=ExtResource("1_vbawi")]
+
+[node name="Player" parent="." instance=ExtResource("2_3hkb6")]
+position = Vector2(0, 252)
