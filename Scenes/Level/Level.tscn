@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7dfoucdxobqx"]
+[gd_scene load_steps=6 format=3 uid="uid://b7dfoucdxobqx"]
 
 [ext_resource type="Script" uid="uid://bgk0k8cc677ux" path="res://Scenes/Level/Level.gd" id="1_4dwx7"]
 [ext_resource type="PackedScene" uid="uid://cneqf53qdd2te" path="res://Scenes/Edges/Edges.tscn" id="1_vbawi"]
-[ext_resource type="PackedScene" uid="uid://b1e4evkj523c7" path="res://Scenes/Paddle/Player_1/Player.tscn" id="2_3hkb6"]
 [ext_resource type="PackedScene" uid="uid://b6lmoehv7cob7" path="res://Assets/Board/Board.tscn" id="2_qp1lj"]
+[ext_resource type="PackedScene" uid="uid://qut68ysdur5k" path="res://Scenes/Paddle/Player_1/Player_1.tscn" id="4_qp1lj"]
+[ext_resource type="PackedScene" uid="uid://3o1c0f8m8mjf" path="res://Scenes/Paddle/Cpu/Cpu.tscn" id="5_k2uda"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_4dwx7")
@@ -12,12 +13,14 @@ script = ExtResource("1_4dwx7")
 
 [node name="Edges" parent="Board" instance=ExtResource("1_vbawi")]
 
-[node name="Player" parent="." instance=ExtResource("2_3hkb6")]
-position = Vector2(618, 252)
+[node name="Player_1" parent="." instance=ExtResource("4_qp1lj")]
+position = Vector2(620, 205)
+
+[node name="CPU" parent="." instance=ExtResource("5_k2uda")]
+position = Vector2(10, 205)
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 1.5
 one_shot = true
-autostart = true
 
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

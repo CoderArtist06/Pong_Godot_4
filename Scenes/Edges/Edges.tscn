@@ -1,14 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://cneqf53qdd2te"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75q1m"]
-size = Vector2(688, 32)
+size = Vector2(640, 32)
 
 [node name="Edges" type="StaticBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="TopEdge" type="CollisionShape2D" parent="."]
 position = Vector2(320, -8)
 shape = SubResource("RectangleShape2D_75q1m")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="BottomEdge" type="CollisionShape2D" parent="."]
 position = Vector2(320, 488)
 shape = SubResource("RectangleShape2D_75q1m")

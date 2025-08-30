@@ -1,31 +1,38 @@
-extends Area2D
+extends CharacterBody2D
 
 
-@onready var start_timer: Timer = $StartTimer
+var win_size: Vector2
 
-@export var speed: float = 100.0
-
-var angle: Vector2 = Vector2.ZERO
+@export var start_speed: int = 200
+const ACCELERATION: int = 50
+var speed: int
+var direction: Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
-	start_timer.start()
+	win_size = get_viewport_rect().size
 
 
-func _process(delta: float) -> void:
-	if angle != Vector2.ZERO:
-		position += angle * speed * delta
-
-
-func _on_start_timer_timeout() -> void:
-	angle = random_angle()
-
-
-func random_angle() -> Vector2:
-	var random_angle: int = randi_range(-70, 70)
-	var angle_rad: float = random_angle * (PI / 180.0)
-	# Debugging
-	print("Angle: %d\nRadiant: %f\n" % [random_angle, angle_rad])
-	var direction: Vector2 = Vector2(cos(angle_rad), sin(angle_rad)).normalized()
+# Imposta una nuova direzione per l'entità
+#
+# Set a new direction for the entity
+func new_ball() -> void:
+	position = win_size / 2
 	
-	return direction
+	speed = start_speed
+	direction = random_direction()
+
+
+# https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html
+func _physics_process(delta: float) -> void:
+	if (direction != Vector2.ZERO) == true:
+		move_and_collide(direction * speed * delta)
+	else:
+		pass
+
+
+func random_direction() -> Vector2:
+	var new_dir: Vector2 = Vector2()
+	new_dir.x = [1, -1].pick_random() # Right or Left
+	new_dir.y = randf_range(-0.8, 0.8) # Up or Down
+	return new_dir.normalized()

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://3o1c0f8m8mjf"]
+
+[ext_resource type="PackedScene" uid="uid://d1atvthsokg7p" path="res://Scenes/Paddle/Paddle.tscn" id="1_us5mn"]
+[ext_resource type="Script" uid="uid://dfq0iwyko1apm" path="res://Scenes/Paddle/Cpu/Cpu.gd" id="2_e1gc0"]
+
+[node name="CPU" instance=ExtResource("1_us5mn")]
+script = ExtResource("2_e1gc0")
