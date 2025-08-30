@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6lmoehv7cob7"]
+
+[ext_resource type="Script" uid="uid://caqr1f56bxtn3" path="res://Assets/Board/CenterLinePanel.gd" id="1_7mf26"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5t2pg"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Board" type="CanvasLayer"]
+
+[node name="UpperEdgePanel" type="Panel" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(0, 8)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5t2pg")
+
+[node name="DownEdgePanel" type="Panel" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(0, 8)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5t2pg")
+
+[node name="CenterLinePanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(8, 0)
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7mf26")
+dash_lenght = 18

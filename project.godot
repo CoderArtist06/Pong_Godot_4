@@ -15,6 +15,10 @@ run/main_scene="uid://b7dfoucdxobqx"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ScoreManager="*res://Globals/ScoreManager.gd"
+
 [display]
 
 window/size/viewport_width=640

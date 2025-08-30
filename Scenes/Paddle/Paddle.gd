@@ -6,7 +6,11 @@ class_name Paddle
 
 @onready var color_rect: ColorRect = $ColorRect
 
-@export var speed: float = 250.0
+@export var speed: float = 300.0
+
+
+var win_size: Vector2
+
 
 var border: int = 8
 
@@ -18,7 +22,8 @@ var bottom_limit: float
 #
 # Initialize the necessary values for paddle movement
 func _ready() -> void:
-	screen_height = get_viewport_rect().size.y
+	win_size = get_viewport_rect().size
+	screen_height = win_size.y
 	paddle_height = color_rect.get_size().y
 	bottom_limit = screen_height - paddle_height - border
 
