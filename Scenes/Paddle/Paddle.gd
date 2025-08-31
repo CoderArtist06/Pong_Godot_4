@@ -24,7 +24,7 @@ var bottom_limit: float
 func _ready() -> void:
 	win_size = get_viewport_rect().size
 	screen_height = win_size.y
-	paddle_height = color_rect.get_size().y
+	paddle_height = (color_rect.get_size().y) / 2
 	bottom_limit = screen_height - paddle_height - border
 
 
@@ -33,5 +33,5 @@ func move_paddle(direction: float, delta: float) -> void:
 	# Limita il movimento tra il bordo superiore e quello inferiore dello schermo
 	#
 	# Limit the movement between the top edge and the bottom edge of the screen.
-	movement = clampf(movement, border, bottom_limit)
+	movement = clampf(movement, paddle_height + border, bottom_limit)
 	position.y = movement

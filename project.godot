@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 ScoreManager="*res://Globals/ScoreManager.gd"
+GameManager="*res://Globals/GameManager.gd"
+SignalHub="*res://Globals/SignalHub.gd"
 
 [display]
 

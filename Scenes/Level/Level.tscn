@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b7dfoucdxobqx"]
+[gd_scene load_steps=8 format=3 uid="uid://b7dfoucdxobqx"]
 
 [ext_resource type="Script" uid="uid://bgk0k8cc677ux" path="res://Scenes/Level/Level.gd" id="1_4dwx7"]
 [ext_resource type="PackedScene" uid="uid://cneqf53qdd2te" path="res://Scenes/Edges/Edges.tscn" id="1_vbawi"]
 [ext_resource type="PackedScene" uid="uid://b6lmoehv7cob7" path="res://Assets/Board/Board.tscn" id="2_qp1lj"]
 [ext_resource type="PackedScene" uid="uid://qut68ysdur5k" path="res://Scenes/Paddle/Player_1/Player_1.tscn" id="4_qp1lj"]
 [ext_resource type="PackedScene" uid="uid://3o1c0f8m8mjf" path="res://Scenes/Paddle/Cpu/Cpu.tscn" id="5_k2uda"]
+[ext_resource type="PackedScene" uid="uid://bhugt7nxbvs2m" path="res://Scenes/Hud/Hud.tscn" id="6_ksici"]
+[ext_resource type="PackedScene" uid="uid://bplamosbvvtn7" path="res://Scenes/ScoreArea2d/ScoreArea2d.tscn" id="7_8gphe"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_4dwx7")
@@ -14,10 +16,17 @@ script = ExtResource("1_4dwx7")
 [node name="Edges" parent="Board" instance=ExtResource("1_vbawi")]
 
 [node name="Player_1" parent="." instance=ExtResource("4_qp1lj")]
-position = Vector2(620, 205)
+position = Vector2(620, 240)
 
 [node name="CPU" parent="." instance=ExtResource("5_k2uda")]
-position = Vector2(10, 205)
+position = Vector2(10, 240)
+
+[node name="ScoreArea2DLeft" parent="." instance=ExtResource("7_8gphe")]
+
+[node name="ScoreArea2DRight" parent="." instance=ExtResource("7_8gphe")]
+position = Vector2(680, 0)
+
+[node name="HUD" parent="." instance=ExtResource("6_ksici")]
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 1.5

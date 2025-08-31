@@ -1,9 +1,8 @@
 extends Node2D
 
 
-
-
 @onready var start_timer: Timer = $StartTimer
+@onready var cpu: CPU = $CPU
 
 const BALL = preload("res://Scenes/Ball/Ball.tscn")
 
@@ -18,6 +17,11 @@ func _ready() -> void:
 func spawn_ball() -> void:
 	ball_instance = BALL.instantiate()
 	add_child(ball_instance)
+	
+	# Passa la palla alla CPU
+	#
+	# Pass the ball to the CPU
+	cpu.set_ball(ball_instance)
 
 
 func _on_start_timer_timeout() -> void:
