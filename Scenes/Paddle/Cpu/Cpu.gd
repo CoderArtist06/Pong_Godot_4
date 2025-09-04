@@ -33,4 +33,4 @@ func _process(delta: float) -> void:
 	
 	position.y -= move_by
 	
-	position.y = clampf(position.y, paddle_height + border, bottom_limit)
+	position.y = clampf(position.y, paddle_half_height + border, bottom_limit)

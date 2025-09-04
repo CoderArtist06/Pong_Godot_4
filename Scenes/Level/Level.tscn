@@ -19,7 +19,7 @@ script = ExtResource("1_4dwx7")
 position = Vector2(620, 240)
 
 [node name="CPU" parent="." instance=ExtResource("5_k2uda")]
-position = Vector2(10, 240)
+position = Vector2(20, 240)
 
 [node name="ScoreArea2DLeft" parent="." instance=ExtResource("7_8gphe")]
 

@@ -4,6 +4,7 @@
 size = Vector2(640, 32)
 
 [node name="Edges" type="StaticBody2D"]
+collision_layer = 2
 
 [node name="TopEdge" type="CollisionShape2D" parent="."]
 position = Vector2(320, -8)
