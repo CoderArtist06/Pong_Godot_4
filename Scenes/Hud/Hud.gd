@@ -7,9 +7,9 @@ extends CanvasLayer
 
 
 func _ready() -> void:
-	#SignalHub.connect("score_updated", self, "_on_score_update")
-	pass
+	SignalHub.connect("score_updated", Callable(self, "_on_score_update"))
 
 
 func _on_score_update(score_left: int, score_right: int) -> void:
-	pass
+	player_1.text = str(score_left)
+	player_2.text = str(score_right)

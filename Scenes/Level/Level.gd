@@ -39,7 +39,7 @@ func _on_start_timer_timeout() -> void:
 
 func _on_score_area_2d_left_body_entered(_body: Node2D) -> void:
 	if can_score == true:
-		score_right += 1
+		score_left += 1
 		SignalHub.emit_score_updated(score_left, score_right)
 		start_timer.start()
 		#print("new ball")
@@ -47,7 +47,7 @@ func _on_score_area_2d_left_body_entered(_body: Node2D) -> void:
 
 func _on_score_area_2d_right_body_entered(_body: Node2D) -> void:
 	if can_score == true:
-		score_left += 1
+		score_right += 1
 		SignalHub.emit_score_updated(score_left, score_right)
 		start_timer.start()
 		#print("new ball")
