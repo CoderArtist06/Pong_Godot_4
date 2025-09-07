@@ -1,14 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bhugt7nxbvs2m"]
+[gd_scene load_steps=3 format=3 uid="uid://bhugt7nxbvs2m"]
 
 [ext_resource type="LabelSettings" uid="uid://bjt84iahncd04" path="res://Resource/score_label_32_white.tres" id="1_iteex"]
+[ext_resource type="Script" uid="uid://ctcivv1v4wjag" path="res://Scenes/Hud/Hud.gd" id="1_xymhr"]
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_xymhr")
 
 [node name="Player2" type="Label" parent="."]
-offset_left = 256.0
-offset_top = 10.0
-offset_right = 296.0
-offset_bottom = 46.0
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.021
+anchor_right = 0.462
+anchor_bottom = 0.096
+offset_top = -0.0800018
+offset_right = 0.320007
+offset_bottom = -0.0800018
 size_flags_vertical = 0
 text = "0"
 label_settings = ExtResource("1_iteex")
@@ -16,10 +22,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player1" type="Label" parent="."]
-offset_left = 344.0
-offset_top = 10.0
-offset_right = 384.0
-offset_bottom = 46.0
+anchors_preset = -1
+anchor_left = 0.537
+anchor_top = 0.021
+anchor_right = 0.6
+anchor_bottom = 0.096
+offset_left = 0.320007
+offset_top = -0.0800009
+offset_bottom = -0.0800018
 size_flags_vertical = 0
 text = "0"
 label_settings = ExtResource("1_iteex")

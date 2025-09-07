@@ -7,8 +7,8 @@ class_name CPU
 
 var ball: Node2D = null
 var ball_position: Vector2 = Vector2.ZERO
-var distance: int = 0
-var move_by: int = 0
+var distance: float = 0.0
+var move_by: float = 0.0
 
 
 func set_ball(ball_reference) -> void:

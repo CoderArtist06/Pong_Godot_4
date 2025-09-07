@@ -32,4 +32,6 @@ position = Vector2(680, 0)
 wait_time = 1.5
 one_shot = true
 
+[connection signal="body_entered" from="ScoreArea2DLeft" to="." method="_on_score_area_2d_left_body_entered"]
+[connection signal="body_entered" from="ScoreArea2DRight" to="." method="_on_score_area_2d_right_body_entered"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

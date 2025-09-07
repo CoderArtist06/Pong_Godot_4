@@ -3,8 +3,8 @@ extends CharacterBody2D
 
 var win_size: Vector2
 
-var start_speed: int #= 140
-var random_start_speed: Array = [220, 240, 260]
+@export var start_speed: int = 240
+#var random_start_speed: Array = [220, 240, 260]
 const ACCELERATION: int = 20
 var speed: int
 var direction: Vector2 = Vector2.ZERO
@@ -20,8 +20,8 @@ func _ready() -> void:
 func new_ball() -> void:
 	position = win_size / 2
 	
-	start_speed = random_start_speed.pick_random()
-	print("Start_speed: ", start_speed)
+	#start_speed = random_start_speed.pick_random()
+	#print("Start_speed: ", start_speed)
 	
 	speed = start_speed
 	direction = random_direction()
