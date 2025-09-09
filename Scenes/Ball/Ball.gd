@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
 
+@onready var audio: AudioStreamPlayer2D = $Audio
+
 var win_size: Vector2
 
 @export var start_speed: int = 240
@@ -40,6 +42,7 @@ func _physics_process(delta: float) -> void:
 		if collider is Player1 or collider is CPU:
 			speed += ACCELERATION
 			direction = new_direction_paddle(collider)
+			audio.play()
 		# Se la palla colpisce il muro
 		#
 		# If ball hits a wall

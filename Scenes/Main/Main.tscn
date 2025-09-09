@@ -1,0 +1,144 @@
+[gd_scene load_steps=7 format=3 uid="uid://c21dlk411bcue"]
+
+[ext_resource type="FontFile" uid="uid://bbcg1mmyji6qk" path="res://Assets/Font/Tiny5-Regular.ttf" id="1_p8rbg"]
+[ext_resource type="Script" uid="uid://d3rulpv5g7mio" path="res://Scenes/Main/Main.gd" id="1_qtv3y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtv3y"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cmk6n"]
+font = ExtResource("1_p8rbg")
+font_size = 64
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p8rbg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qtv3y"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qtv3y")
+
+[node name="Edges" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Edges"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qtv3y")
+
+[node name="Panel2" type="Panel" parent="Edges"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qtv3y")
+
+[node name="Panel3" type="Panel" parent="Edges"]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qtv3y")
+
+[node name="Panel4" type="Panel" parent="Edges"]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qtv3y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.5
+offset_top = -99.0
+offset_right = 103.5
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "PONG"
+label_settings = SubResource("LabelSettings_cmk6n")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="CPU" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_colors/font_hover_color = Color(0.647059, 0.65098, 0.65098, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_p8rbg")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p8rbg")
+text = "    Player 1  VS    CPU       "
+
+[node name="Player2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_colors/font_hover_color = Color(0.647059, 0.65098, 0.65098, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_p8rbg")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qtv3y")
+text = "   Player 1  VS  Player 2 "
+
+[node name="Spacer2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_colors/font_hover_color = Color(0.647059, 0.65098, 0.65098, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_p8rbg")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qtv3y")
+text = "  Exit"
+
+[connection signal="pressed" from="VBoxContainer/CPU" to="." method="_on_cpu_pressed"]
+[connection signal="pressed" from="VBoxContainer/Player2" to="." method="_on_player_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
