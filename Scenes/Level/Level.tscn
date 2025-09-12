@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cneqf53qdd2te" path="res://Scenes/Edges/Edges.tscn" id="1_vbawi"]
 [ext_resource type="PackedScene" uid="uid://b6lmoehv7cob7" path="res://Assets/Board/Board.tscn" id="2_qp1lj"]
 [ext_resource type="PackedScene" uid="uid://qut68ysdur5k" path="res://Scenes/Paddle/Player_1/Player_1.tscn" id="4_qp1lj"]
-[ext_resource type="PackedScene" uid="uid://3o1c0f8m8mjf" path="res://Scenes/Paddle/Cpu/Cpu.tscn" id="5_k2uda"]
 [ext_resource type="PackedScene" uid="uid://bhugt7nxbvs2m" path="res://Scenes/Hud/Hud.tscn" id="6_ksici"]
 [ext_resource type="PackedScene" uid="uid://bplamosbvvtn7" path="res://Scenes/ScoreArea2d/ScoreArea2d.tscn" id="7_8gphe"]
+[ext_resource type="AudioStream" uid="uid://djsrfiw82eghk" path="res://Assets/Sound/Music/VADE - HBABUA - 8_6_25, 12.58 AM.mp3" id="7_t3e81"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_4dwx7")
@@ -18,9 +18,6 @@ script = ExtResource("1_4dwx7")
 [node name="Player_1" parent="." instance=ExtResource("4_qp1lj")]
 position = Vector2(620, 240)
 
-[node name="CPU" parent="." instance=ExtResource("5_k2uda")]
-position = Vector2(20, 240)
-
 [node name="ScoreArea2DLeft" parent="." instance=ExtResource("7_8gphe")]
 
 [node name="ScoreArea2DRight" parent="." instance=ExtResource("7_8gphe")]
@@ -31,6 +28,12 @@ position = Vector2(680, 0)
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 1.5
 one_shot = true
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_t3e81")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="ScoreArea2DLeft" to="." method="_on_score_area_2d_left_body_entered"]
 [connection signal="body_entered" from="ScoreArea2DRight" to="." method="_on_score_area_2d_right_body_entered"]

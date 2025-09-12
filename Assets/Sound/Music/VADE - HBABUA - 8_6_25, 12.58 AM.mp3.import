@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djsrfiw82eghk"
+path="res://.godot/imported/VADE - HBABUA - 8_6_25, 12.58 AM.mp3-193affc33ef990c22e3efbf70f5b26a8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Music/VADE - HBABUA - 8_6_25, 12.58 AM.mp3"
+dest_files=["res://.godot/imported/VADE - HBABUA - 8_6_25, 12.58 AM.mp3-193affc33ef990c22e3efbf70f5b26a8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

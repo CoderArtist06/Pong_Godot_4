@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c4lyuaeiyehe8"]
+
+[ext_resource type="FontFile" uid="uid://bbcg1mmyji6qk" path="res://Assets/Font/Tiny5-Regular.ttf" id="1_0w1cs"]
+
+[resource]
+font = ExtResource("1_0w1cs")
+font_size = 24

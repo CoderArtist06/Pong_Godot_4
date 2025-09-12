@@ -107,7 +107,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_p8rbg")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_p8rbg")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_p8rbg")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_p8rbg")
-text = "    Player 1  VS    CPU       "
+text = "VS CPU"
 
 [node name="Player2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -120,10 +120,23 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_p8rbg")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_p8rbg")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_p8rbg")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qtv3y")
-text = "   Player 1  VS  Player 2 "
+text = "VS Friend"
+
+[node name="Extra" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_colors/font_hover_color = Color(0.647059, 0.65098, 0.65098, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_p8rbg")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p8rbg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qtv3y")
+text = "Extra"
 
 [node name="Spacer2" type="Control" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 5)
+custom_minimum_size = Vector2(0, 4)
 layout_mode = 2
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
@@ -137,8 +150,9 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_p8rbg")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_p8rbg")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_p8rbg")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qtv3y")
-text = "  Exit"
+text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/CPU" to="." method="_on_cpu_pressed"]
 [connection signal="pressed" from="VBoxContainer/Player2" to="." method="_on_player_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Extra" to="." method="_on_extra_pressed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

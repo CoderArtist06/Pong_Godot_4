@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 		# Se la palla colpisce il paddle
 		#
 		# If ball hits paddle
-		if collider is Player1 or collider is CPU:
+		if collider is Paddle:
 			speed += ACCELERATION
 			direction = new_direction_paddle(collider)
 			audio.play()

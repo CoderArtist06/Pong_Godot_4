@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi2wlwyby775e"]
+
+[ext_resource type="Script" uid="uid://by6kq1mvjkivu" path="res://Scenes/Credit/Credit.gd" id="1_da6im"]
+[ext_resource type="LabelSettings" uid="uid://c4lyuaeiyehe8" path="res://Resource/credit_label_24_white.tres" id="2_da6im"]
+[ext_resource type="AudioStream" uid="uid://djsrfiw82eghk" path="res://Assets/Sound/Music/VADE - HBABUA - 8_6_25, 12.58 AM.mp3" id="3_da6im"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xpsme"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Credit" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_da6im")
+
+[node name="Edges" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Edges"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xpsme")
+
+[node name="Panel2" type="Panel" parent="Edges"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xpsme")
+
+[node name="Panel3" type="Panel" parent="Edges"]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xpsme")
+
+[node name="Panel4" type="Panel" parent="Edges"]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xpsme")
+
+[node name="CreditLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -192.0
+offset_right = 192.0
+offset_bottom = 27.0
+grow_horizontal = 2
+size_flags_vertical = 6
+label_settings = ExtResource("2_da6im")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_da6im")
+volume_db = -20.0
+autoplay = true
+parameters/looping = true
