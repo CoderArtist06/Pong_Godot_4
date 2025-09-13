@@ -14,7 +14,7 @@ You can:
 ---
 
 ## How to play
-You can find the controls on Itch.io, along with both a **browser version** and a **downloadable one**.
+You can find the controls on Itch.io.
 
 ---
 
