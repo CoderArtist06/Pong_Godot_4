@@ -9,7 +9,7 @@ I did my best to stay faithful to the original *Pong (1972)*. The graphics are n
 This repository contains the game’s source code.  
 You can:
 - Clone the project and explore how it was made.
-- Play the **web version** or download the build on [Itch.io](https://coderartist06.itch.io/pong)
+- Play the **web version** or **download the build** on [Itch.io](https://coderartist06.itch.io/pong)
 
 ---
 
