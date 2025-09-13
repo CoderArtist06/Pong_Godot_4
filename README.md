@@ -54,16 +54,12 @@ Licensed under **CC BY 4.0** — [Free Music Archive](https://freemusicarchive.o
 ## Special Thanks
 Inspired by **Pong (1972)**, one of the earliest and most influential video games.
 
+Thank you for playing, or even just analyzing, my first game.
+— *CoderArtist06*
+
 ---
 
 ## License
 
 This project is released under **GPL-3.0**.  
 See `LICENSE` for details.
-
----
-
-## Final Note
-
-Thank you for playing, or even just analyzing, my first game.
-— *CoderArtist06*
