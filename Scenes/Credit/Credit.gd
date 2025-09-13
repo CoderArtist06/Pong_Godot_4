@@ -15,6 +15,8 @@ func _ready():
 	Pong
 	
 	
+	
+	
 	Credit
 	
 	
@@ -26,6 +28,11 @@ func _ready():
 	Artist
 	
 	Valentin Cristian Ghita (aka CoderArtist06)
+	
+	
+	
+	
+	Third-Party Resources
 	
 	
 	Font
@@ -55,18 +62,24 @@ func _ready():
 	Free Music Archive
 	
 	
+	
+	
 	Special Thanks
 	
-	Inspired by Pong (1972), one of the earliest 
-	and most influential commercial video games. 
-	While not the first ever created, Pong helped 
-	shape the future of interactive entertainment.
+	Inspired by Pong (1972), one of 
+	the earliest and most influential 
+	video games.
+	
+	
+	thank you all for playing my first game 
+	- CoderArtist06
 	
 	
 	
 	
 	
-	thank you all for playing my first game - CoderArtist06
+	The video game is licensed under 
+	GPL-3.0.
 	"""
 	
 	# Posiziona il testo sotto lo schermo
